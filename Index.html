@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AthwinUI — Modern CSS Library</title>
+  <!-- Link to the CSS library directly -->
+  <link rel="stylesheet" href="athwin.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="ath-navbar">
+    <div class="ath-container ath-navbar-inner">
+      <a href="#" class="ath-brand">Athwin<span class="ath-gradient-text">UI</span></a>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <a href="#components" class="ath-btn ath-btn-ghost">Components</a>
+        <button id="themeToggle" class="ath-btn ath-btn-outline" onclick="toggleTheme()">☀️ Light Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="ath-section">
+    <div class="ath-container" style="text-align: center; max-width: 800px;">
+      <span class="ath-badge ath-badge-primary" style="margin-bottom: 1rem;">v1.0.0 Release</span>
+      <h1 style="font-size: 3.2rem;">Modern, Simple & Pure CSS Architecture</h1>
+      <p class="ath-text-muted" style="font-size: 1.15rem; margin-bottom: 2rem;">
+        Zero JS frameworks, zero build step. Direct CDN and GitHub Pages integration with full light & dark theme capabilities.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center;">
+        <a href="#integration" class="ath-btn ath-btn-primary">Quick Setup</a>
+        <a href="#components" class="ath-btn ath-btn-outline">Explore UI Elements</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Integration Instructions -->
+  <section class="ath-section" id="integration">
+    <div class="ath-container">
+      <div class="ath-card">
+        <h3>GitHub / CDN Integration</h3>
+        <p class="ath-text-muted" style="margin-bottom: 1rem;">Import directly via GitHub Pages or your custom domain without NPM build chains.</p>
+        <div class="ath-code-block">
+          &lt;link rel="stylesheet" href="https://yourusername.github.io/AthwinUI/athwin.css"&gt;
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Components Grid -->
+  <section class="ath-section" id="components">
+    <div class="ath-container">
+      <h2>Component Showcase</h2>
+      <p class="ath-text-muted" style="margin-bottom: 2rem;">Clean semantic classes designed for instant drop-in usage.</p>
+
+      <div class="ath-grid">
+        
+        <!-- Glassmorphic Cards -->
+        <div class="ath-col-4">
+          <div class="ath-card">
+            <h3>Glass Cards</h3>
+            <p class="ath-text-muted" style="margin-bottom: 1rem;">Backdrop blurring with custom dynamic border highlights on hover.</p>
+            <span class="ath-badge ath-badge-success">Active</span>
+          </div>
+        </div>
+
+        <!-- Buttons Section -->
+        <div class="ath-col-4">
+          <div class="ath-card">
+            <h3>Buttons</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
+              <button class="ath-btn ath-btn-primary">Primary Action</button>
+              <button class="ath-btn ath-btn-outline">Outline Action</button>
+              <button class="ath-btn ath-btn-ghost">Ghost Action</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges & Statuses -->
+        <div class="ath-col-4">
+          <div class="ath-card">
+            <h3>Status Badges</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+              <span class="ath-badge ath-badge-primary">Primary</span>
+              <span class="ath-badge ath-badge-success">Success</span>
+              <span class="ath-badge ath-badge-warning">Warning</span>
+              <span class="ath-badge ath-badge-danger">Danger</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Controls -->
+        <div class="ath-col-12">
+          <div class="ath-card">
+            <h3>Form Controls</h3>
+            <div class="ath-grid" style="margin-top: 1rem;">
+              <div class="ath-col-6">
+                <div class="ath-form-group">
+                  <label class="ath-label">Username</label>
+                  <input type="text" class="ath-input" placeholder="e.g. dagger_dev">
+                </div>
+              </div>
+              <div class="ath-col-6">
+                <div class="ath-form-group">
+                  <label class="ath-label">Theme Preference</label>
+                  <select class="ath-select">
+                    <option>Dark Mode (Default)</option>
+                    <option>Light Mode</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Theme Switcher Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.getElementById('themeToggle');
+      if (html.getAttribute('data-theme') === 'light') {
+        html.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️ Light Mode';
+      } else {
+        html.setAttribute('data-theme', 'light');
+        btn.textContent = '🌙 Dark Mode';
+      }
+    }
+  </script>
+</body>
+</html>
