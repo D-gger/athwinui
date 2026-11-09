@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" data-aw-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>AthwinUI — Component Showcase</title>
+  <link rel="stylesheet" href="./athwin.css">
+  <style>
+    /* Showcase-only styling. The components themselves come from athwin.css. */
+    .demo-hero { position: relative; overflow: hidden; padding: clamp(2rem, 6vw, 5rem); border: 1px solid var(--aw-border); border-radius: 2rem; background: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--aw-primary) 22%, transparent), transparent 32%), var(--aw-surface); }
+    .demo-hero::after { content: "A"; position: absolute; inset-inline-end: 4%; inset-block-end: -34%; color: color-mix(in srgb, var(--aw-primary) 7%, transparent); font-size: clamp(15rem, 30vw, 28rem); font-weight: 900; line-height: 1; pointer-events: none; }
+    .demo-hero > * { position: relative; z-index: 1; }
+    .demo-section { scroll-margin-top: 2rem; }
+    .demo-section + .demo-section { margin-top: 3.5rem; }
+    .demo-title { margin-bottom: 1.15rem; }
+    .demo-title p { margin-top: .35rem; color: var(--aw-muted); }
+    .demo-swatch { height: 4.5rem; border-radius: .75rem; }
+    .demo-code { font-size: .8rem; }
+    .demo-sidebar { position: sticky; top: 1rem; align-self: start; }
+    .demo-layout { display: grid; grid-template-columns: 205px minmax(0, 1fr); gap: 2rem; }
+    .demo-nav a { display: block; padding: .45rem .65rem; border-radius: .5rem; color: var(--aw-muted); text-decoration: none; font-size: .88rem; }
+    .demo-nav a:hover { background: var(--aw-primary-soft); color: var(--aw-primary); }
+    .demo-icon { display: grid; width: 2.6rem; height: 2.6rem; place-items: center; border-radius: .8rem; background: var(--aw-primary-soft); color: var(--aw-primary); font-size: 1.2rem; }
+    .demo-footer { padding-block: 2rem; border-top: 1px solid var(--aw-border); color: var(--aw-muted); }
+    @media (max-width: 850px) { .demo-layout { grid-template-columns: 1fr; } .demo-sidebar { position: static; } .demo-nav { display: flex; flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+  <header class="aw-container aw-between" style="padding-block:1rem">
+    <a href="#" class="aw-cluster" style="color:var(--aw-text);text-decoration:none;font-weight:850;font-size:1.15rem">
+      <span class="demo-icon">✦</span> AthwinUI <span class="aw-badge aw-badge-primary">v1.0</span>
+    </a>
+    <nav class="aw-nav" aria-label="Main navigation">
+      <a href="#components">Components</a>
+      <a href="#forms">Forms</a>
+      <a href="#utilities">Utilities</a>
+      <button class="aw-btn aw-btn-outline aw-btn-sm" id="themeToggle" type="button">☾ Theme</button>
+    </nav>
+  </header>
+
+  <main class="aw-container aw-section">
+    <section class="demo-hero">
+      <span class="aw-eyebrow">A lightweight CSS UI library</span>
+      <h1 class="aw-display aw-mt-2">Build clean.<br><span style="color:var(--aw-primary)">Ship faster.</span></h1>
+      <p class="aw-lead aw-max-w aw-mt-2">A modern, framework-free component library for interfaces that look considered without making setup complicated.</p>
+      <div class="aw-cluster aw-mt-3">
+        <a class="aw-btn aw-btn-primary aw-btn-lg" href="#components">Explore components <span aria-hidden="true">→</span></a>
+        <a class="aw-btn aw-btn-outline aw-btn-lg" href="#install">Get started</a>
+      </div>
+      <div class="aw-cluster aw-mt-3">
+        <span class="aw-badge aw-badge-success">✓ No JavaScript required</span>
+        <span class="aw-badge aw-badge-info">Responsive</span>
+        <span class="aw-badge aw-badge-primary">Light + dark themes</span>
+      </div>
+    </section>
+
+    <section id="install" class="demo-section aw-card aw-mt-3">
+      <div class="aw-card-header">
+        <div><span class="aw-eyebrow">Quick start</span><h2 class="aw-h3 aw-mt-1">One link. That's it.</h2></div>
+        <span class="aw-badge aw-badge-success">Zero dependencies</span>
+      </div>
+      <p class="aw-muted aw-small aw-mb-2">Add this inside your HTML <code>&lt;head&gt;</code>. For local development, keep <code>athwin.css</code> beside your page and use the relative path.</p>
+      <pre class="demo-code"><code>&lt;link rel="stylesheet" href="https://raw.githubusercontent.com/D-gger/athwinui/refs/heads/main/athwin.css"&gt;</code></pre>
+      <p class="aw-hint aw-mt-2">For production CDN delivery, consider publishing a versioned release or using a CDN that serves GitHub files.</p>
+    </section>
+
+    <div class="demo-layout aw-mt-3">
+      <aside class="demo-sidebar aw-card">
+        <p class="aw-eyebrow aw-mb-1">On this page</p>
+        <nav class="demo-nav aw-stack" style="--aw-gap:.15rem">
+          <a href="#foundations">Foundations</a><a href="#buttons">Buttons</a><a href="#cards">Cards & stats</a>
+          <a href="#feedback">Feedback</a><a href="#forms">Forms</a><a href="#navigation">Navigation</a>
+          <a href="#data">Tables & lists</a><a href="#utilities">Utilities</a>
+        </nav>
+      </aside>
+
+      <div>
+        <section id="foundations" class="demo-section">
+          <div class="demo-title"><span class="aw-eyebrow">01 / Foundations</span><h2 class="aw-h2">A consistent visual language</h2><p>Tokens, typography, surfaces, and colors that work together.</p></div>
+          <div class="aw-grid" style="--aw-cols:2">
+            <div class="aw-card aw-stack">
+              <h3 class="aw-h3">Typography</h3><div class="aw-display" style="font-size:2.5rem">Display</div><h2 class="aw-h2">Heading two</h2><h3 class="aw-h3">Heading three</h3><p>Regular body copy for everyday interface content.</p><p class="aw-muted">Muted supporting text for secondary information.</p><p class="aw-small aw-subtle">Small subtle metadata</p>
+            </div>
+            <div class="aw-card aw-stack">
+              <h3 class="aw-h3">Color palette</h3>
+              <div class="aw-grid" style="--aw-cols:3;--aw-gap:.6rem">
+                <div><div class="demo-swatch" style="background:var(--aw-primary)"></div><p class="aw-small aw-mt-1">Primary</p></div>
+                <div><div class="demo-swatch" style="background:var(--aw-success)"></div><p class="aw-small aw-mt-1">Success</p></div>
+                <div><div class="demo-swatch" style="background:var(--aw-warning)"></div><p class="aw-small aw-mt-1">Warning</p></div>
+                <div><div class="demo-swatch" style="background:var(--aw-danger)"></div><p class="aw-small aw-mt-1">Danger</p></div>
+                <div><div class="demo-swatch" style="background:var(--aw-info)"></div><p class="aw-small aw-mt-1">Info</p></div>
+                <div><div class="demo-swatch" style="background:var(--aw-surface-3);border:1px solid var(--aw-border)"></div><p class="aw-small aw-mt-1">Surface</p></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="buttons" class="demo-section">
+          <div class="demo-title"><span class="aw-eyebrow">02 / Actions</span><h2 class="aw-h2">Buttons</h2><p>Different emphasis levels, sizes, and shapes.</p></div>
+          <div class="aw-card aw-stack">
+            <div class="aw-cluster"><button class="aw-btn aw-btn-primary">Primary action</button><button class="aw-btn">Default</button><button class="aw-btn aw-btn-outline">Outline</button><button class="aw-btn aw-btn-ghost">Ghost</button></div>
+            <div class="aw-cluster"><button class="aw-btn aw-btn-success">Success</button><button class="aw-btn aw-btn-danger">Delete</button><button class="aw-btn aw-btn-soft">Soft</button><button class="aw-btn" disabled>Disabled</button></div>
+            <div class="aw-cluster"><button class="aw-btn aw-btn-primary aw-btn-sm">Small</button><button class="aw-btn aw-btn-primary">Default size</button><button class="aw-btn aw-btn-primary aw-btn-lg">Large</button><button class="aw-btn aw-btn-outline aw-btn-pill">Pill button</button><button class="aw-btn aw-btn-primary aw-btn-icon" aria-label="Add">＋</button></div>
+          </div>
+        </section>
+
+        <section id="cards" class="demo-section">
+          <div class="demo-title"><span class="aw-eyebrow">03 / Content</span><h2 class="aw-h2">Cards, badges & stats</h2><p>Organize content and highlight useful information.</p></div>
+          <div class="aw-grid-auto">
+            <article class="aw-card aw-card-hover"><div class="aw-card-header"><span class="demo-icon">◈</span><span class="aw-badge aw-badge-success">Active</span></div><h3 class="aw-h3">Project overview</h3><p class="aw-muted aw-small aw-mt-1">A flexible card with a header, content, and footer area.</p><div class="aw-card-footer"><span class="aw-small aw-muted">Updated just now</span><a href="#">View →</a></div></article>
+            <article class="aw-card"><div class="aw-stat"><span class="aw-muted aw-small">Total visitors</span><strong class="aw-stat-value">24,892</strong><span class="aw-badge aw-badge-success">↗ 12.8%</span></div><div class="aw-progress aw-mt-2"><div class="aw-progress-bar" style="--aw-progress:72%"></div></div></article>
+            <article class="aw-card"><div class="aw-stat"><span class="aw-muted aw-small">Monthly revenue</span><strong class="aw-stat-value">$8,420</strong><span class="aw-muted aw-small">Compared to last month</span></div><div class="aw-cluster aw-mt-2"><span class="aw-badge aw-badge-primary">On target</span><span class="aw-badge">July</span></div></article>
+          </div>
+          <div class="aw-cluster aw-mt-2"><span class="aw-badge">Default</span><span class="aw-badge aw-badge-primary">Primary</span><span class="aw-badge aw-badge-success">Success</span><span class="aw-badge aw-badge-warning">Warning</span><span class="aw-badge aw-badge-danger">Danger</span><span class="aw-badge aw-badge-info">Info</span></div>
+          <div class="aw-cluster aw-mt-2"><span class="aw-avatar aw-avatar-sm">AW</span><span class="aw-avatar">JD</span><span class="aw-avatar aw-avatar-lg">MK</span><span class="aw-avatar"><img src="https://i.pravatar.cc/100?img=12" alt="Avatar example"></span><span class="aw-muted aw-small">Avatar sizes and image support</span></div>
+        </section>
+
+        <section id="feedback" class="demo-section">
+          <div class="demo-title"><span class="aw-eyebrow">04 / Feedback</span><h2 class="aw-h2">Alerts & loading states</h2><p>Communicate status without overwhelming the page.</p></div>
+          <div class="aw-stack">
+            <div class="aw-alert aw-alert-success"><span>✓</span><div><strong>Changes saved</strong>Your settings have been updated successfully.</div></div>
+            <div class="aw-alert aw-alert-info"><span>ⓘ</span><div><strong>Heads up</strong>A new version is available for this project.</div></div>
+            <div class="aw-alert aw-alert-warning"><span>!</span><div><strong>Almost there</strong>Review the highlighted fields before continuing.</div></div>
+            <div class="aw-alert aw-alert-danger"><span>×</span><div><strong>Something went wrong</strong>We couldn't complete that request. Try again.</div></div>
+          </div>
+          <div class="aw-grid aw-mt-2" style="--aw-cols:2">
+            <div class="aw-card aw-stack"><div class="aw-between"><strong>Upload progress</strong><span class="aw-small aw-muted">72%</span></div><div class="aw-progress"><div class="aw-progress-bar" style="--aw-progress:72%"></div></div><div class="aw-progress aw-progress-success"><div class="aw-progress-bar" style="--aw-progress:46%"></div></div></div>
+            <div class="aw-card aw-cluster"><span class="aw-spinner" aria-label="Loading"></span><span class="aw-muted aw-small">Loading your content…</span><span class="aw-skeleton" style="width:4rem;height:1rem"></span><span class="aw-skeleton" style="width:7rem;height:1rem"></span></div>
+          </div>
+          <div class="aw-toast aw-mt-2"><span class="aw-badge aw-badge-success">✓</span><span class="aw-small">Your changes have been saved.</span><button class="aw-btn aw-btn-ghost aw-btn-sm" aria-label="Dismiss">×</button></div>
+        </section>
+
+        <section id="forms" class="demo-section">
+          <div class="demo-title"><span class="aw-eyebrow">05 / Input</span><h2 class="aw-h2">Forms & controls</h2><p>Inputs, selects, checkboxes, switches, and range sliders.</p></div>
+          <form class="aw-card aw-stack" onsubmit="event.preventDefault();document.getElementById('formResult').textContent='Demo form submitted successfully.'">
+            <div class="aw-grid" style="--aw-cols:2">
+              <label class="aw-field"><span class="aw-label">Full name</span><input class="aw-input" type="text" placeholder="Jane Smith"></label>
+              <label class="aw-field"><span class="aw-label">Email address</span><input class="aw-input" type="email" placeholder="jane@example.com"><span class="aw-hint">We'll never share your email.</span></label>
+            </div>
+            <label class="aw-field"><span class="aw-label">Role</span><select class="aw-select"><option>Select a role</option><option>Developer</option><option>Designer</option><option>Student</option></select></label>
+            <label class="aw-field"><span class="aw-label">Message</span><textarea class="aw-textarea" placeholder="Tell us a little about your project…"></textarea></label>
+            <div class="aw-cluster"><label class="aw-check"><input type="checkbox" checked> Subscribe to updates</label><label class="aw-radio"><input type="radio" name="plan" checked> Starter</label><label class="aw-radio"><input type="radio" name="plan"> Pro</label></div>
+            <div class="aw-between"><label class="aw-switch"><input type="checkbox" checked><span class="aw-switch-track"></span><span class="aw-small">Enable notifications</span></label><label class="aw-field" style="width:min(100%,230px)"><span class="aw-label">Volume</span><input class="aw-range" type="range" min="0" max="100" value="65"></label></div>
+            <div class="aw-cluster"><button class="aw-btn aw-btn-primary" type="submit">Submit form</button><button class="aw-btn aw-btn-outline" type="reset">Reset</button><span id="formResult" class="aw-small aw-muted" aria-live="polite"></span></div>
+          </form>
+        </section>
+
+        <section id="navigation" class="demo-section">
+          <div class="demo-title"><span class="aw-eyebrow">06 / Navigation</span><h2 class="aw-h2">Navigation patterns</h2><p>Simple nav links, tabs, breadcrumbs, and dropdowns.</p></div>
+          <div class="aw-card aw-stack">
+            <nav class="aw-nav" aria-label="Example navigation"><a href="#" aria-current="page">Overview</a><a href="#">Projects</a><a href="#">Team</a><a href="#">Settings</a></nav>
+            <hr>
+            <nav class="aw-tabs" aria-label="Example tabs"><button class="is-active" aria-selected="true">All files</button><button>Recent</button><button>Shared</button><button>Archived</button></nav>
+            <div class="aw-breadcrumbs"><a href="#">Home</a><a href="#">Projects</a><span aria-current="page">AthwinUI</span></div>
+            <details class="aw-dropdown"><summary class="aw-btn aw-btn-outline">Open dropdown ▾</summary><div class="aw-dropdown-panel"><a href="#">Profile</a><a href="#">Settings</a><button type="button">Sign out</button></div></details>
+            <div class="aw-cluster"><button class="aw-btn aw-btn-outline aw-tooltip" data-tip="This is a tooltip">Hover for tooltip</button><span class="aw-kbd">Ctrl</span><span class="aw-kbd">K</span><span class="aw-muted aw-small">Keyboard shortcut style</span></div>
+          </div>
+        </section>
+
+        <section id="data" class="demo-section">
+          <div class="demo-title"><span class="aw-eyebrow">07 / Data</span><h2 class="aw-h2">Tables, lists & accordions</h2><p>Present structured information with clear hierarchy.</p></div>
+          <div class="aw-table-wrap"><table class="aw-table"><thead><tr><th>Member</th><th>Status</th><th>Role</th><th>Joined</th></tr></thead><tbody><tr><td><span class="aw-cluster"><span class="aw-avatar aw-avatar-sm">JD</span> Jordan Davis</span></td><td><span class="aw-badge aw-badge-success">Active</span></td><td>Developer</td><td>Aug 12</td></tr><tr><td><span class="aw-cluster"><span class="aw-avatar aw-avatar-sm">AK</span> Alex Kim</span></td><td><span class="aw-badge aw-badge-warning">Pending</span></td><td>Designer</td><td>Aug 14</td></tr><tr><td><span class="aw-cluster"><span class="aw-avatar aw-avatar-sm">SM</span> Sam Morgan</span></td><td><span class="aw-badge aw-badge-success">Active</span></td><td>Manager</td><td>Aug 18</td></tr></tbody></table></div>
+          <div class="aw-grid aw-mt-2" style="--aw-cols:2">
+            <div class="aw-card"><h3 class="aw-h3 aw-mb-2">Feature list</h3><ul class="aw-list"><li><span class="aw-dot"></span><span>Lightweight CSS foundation</span></li><li><span class="aw-dot"></span><span>Reusable design tokens</span></li><li><span class="aw-dot"></span><span>Responsive components</span></li></ul></div>
+            <div class="aw-accordion"><details open><summary>Is JavaScript required?</summary><p>No. The library styles HTML elements. Add JavaScript only when your application needs interactive behavior.</p></details><details><summary>Can I customize the colors?</summary><p>Yes. Override the <code>--aw-*</code> CSS custom properties on <code>:root</code> or a container.</p></details></div>
+          </div>
+        </section>
+
+        <section id="utilities" class="demo-section">
+          <div class="demo-title"><span class="aw-eyebrow">08 / Helpers</span><h2 class="aw-h2">Utility classes</h2><p>Small helpers for spacing, alignment, width, and visibility.</p></div>
+          <div class="aw-card aw-stack">
+            <div class="aw-panel aw-flex aw-flex-wrap aw-items-center aw-justify-between aw-gap-2"><strong>.aw-flex .aw-justify-between</strong><span class="aw-badge aw-badge-primary">Aligned</span></div>
+            <div class="aw-panel aw-text-center"><strong>.aw-text-center</strong><p class="aw-muted aw-small">Centered content with muted supporting text.</p></div>
+            <div class="aw-panel aw-mx-auto aw-max-w"><strong>.aw-mx-auto .aw-max-w</strong><p class="aw-muted aw-small">A centered, constrained-width block.</p></div>
+            <p class="aw-small aw-muted">More helpers: <code>aw-w-full</code>, <code>aw-gap-1</code>, <code>aw-mt-2</code>, <code>aw-rounded</code>, <code>aw-shadow</code>, <code>aw-truncate</code>.</p>
+          </div>
+        </section>
+
+        <section class="demo-section aw-card" style="background:var(--aw-primary);color:var(--aw-on-primary);border:0">
+          <span class="aw-eyebrow" style="color:inherit;opacity:.8">Your next interface</span>
+          <h2 class="aw-h2 aw-mt-1">That's AthwinUI.</h2>
+          <p style="opacity:.85" class="aw-mt-1">A small stylesheet. A lot of building blocks. Your design, your rules.</p>
+          <a class="aw-btn aw-mt-2" href="#install" style="background:white;color:#5144c9">Back to installation ↑</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="aw-container demo-footer aw-between">
+    <span><strong style="color:var(--aw-text)">AthwinUI</strong> <span class="aw-small">v1.0.0</span></span>
+    <span class="aw-small">Made for the open web.</span>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      const root = document.documentElement;
+      const next = root.dataset.awTheme === 'dark' ? 'light' : 'dark';
+      root.dataset.awTheme = next;
+      toggle.textContent = next === 'dark' ? '☀ Light' : '☾ Dark';
+    });
+  </script>
+</body>
+</html>
