@@ -1,5 +1,6 @@
 /* ==========================================================================
-   AthwinUI v1.0.0 — Lightweight Modern CSS Framework
+   AthwinUI v1.0.0 — Lightweight Modern Glassmorphism CSS Framework
+   CDN: https://raw.githubusercontent.com/D-gger/athwinui/refs/heads/main/athwin.css
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -46,7 +47,7 @@
   --ath-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Crisp, High-Contrast Light Mode */
+/* Enhanced Light Mode */
 [data-theme="light"] {
   --ath-primary: #0284c7;
   --ath-primary-hover: #0369a1;
@@ -74,7 +75,6 @@
   --ath-glass-backdrop: blur(16px);
 }
 
-/* System Light Theme Auto-Switching */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     --ath-primary: #0284c7;
@@ -104,12 +104,16 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. Reset & Layout Setup
+   2. Base Reset & Layout
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -154,7 +158,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   3. Typography & Headings
+   3. Typography & Styling
    -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
   color: var(--ath-text-main);
@@ -340,4 +344,13 @@ h4 { font-size: 1.25rem; }
   font-size: 0.875rem;
   color: var(--ath-primary);
   overflow-x: auto;
+  position: relative;
+}
+
+.ath-copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
 }
