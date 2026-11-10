@@ -1,15 +1,31 @@
 {
   "name": "athwinui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, framework-free CSS component library with light and dark themes.",
-  "keywords": ["css", "ui", "components", "design-system", "framework-free", "dark-mode"],
+  "keywords": [
+    "css",
+    "ui",
+    "components",
+    "design-system",
+    "framework-free",
+    "dark-mode"
+  ],
   "homepage": "https://atherix.org/athwinui",
-  "repository": { "type": "git", "url": "git+https://github.com/D-gger/athwinui.git" },
-  "bugs": { "url": "https://github.com/D-gger/athwinui/issues" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-gger/athwinui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/D-gger/athwinui/issues"
+  },
   "license": "GPL-3.0-only",
   "style": "athwin.css",
   "main": "athwin.css",
-  "files": ["athwin.css", "llms.txt", "README.md"],
+  "files": [
+    "athwin.css",
+    "llms.txt",
+    "README.md"
+  ],
   "exports": {
     ".": "./athwin.css",
     "./athwin.css": "./athwin.css",
@@ -18,5 +34,7 @@
   },
   "unpkg": "athwin.css",
   "jsdelivr": "athwin.css",
-  "sideEffects": ["*.css"]
+  "sideEffects": [
+    "*.css"
+  ]
 }
