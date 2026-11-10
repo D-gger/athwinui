@@ -6,6 +6,22 @@
 - Source: https://github.com/D-gger/athwinui
 - License: GPL-3.0
 
+## Table of contents
+
+- [Install](#install)
+- [LLMs](#llms)
+- [Key notes for writing code](#key-notes-for-writing-code)
+- [Layout](#layout)
+- [Typography](#typography)
+- [Buttons](#buttons)
+- [Surfaces](#surfaces)
+- [Forms](#forms)
+- [Navigation and disclosure](#navigation-and-disclosure)
+- [Data and feedback](#data-and-feedback)
+- [Utilities](#utilities)
+- [Design tokens](#design-tokens)
+- [Optional](#optional)
+
 ## Install
 
 Add this to the `<head>` of any HTML page, then use `aw-*` classes:
@@ -40,12 +56,11 @@ Minimal page:
 Reference https://atherix.org/llms.txt in your prompt
 > **Example:** ```Use https://atherix.org/llms.txt for styling```
 
-## Rules for generating code
+## Key notes for writing code
 
-- Use only classes listed below. Do not invent `aw-*` classes.
+- Use only classes listed below.
 - Variants are suffixes: `aw-btn aw-btn-primary`, `aw-badge aw-badge-success`. Always include the base class.
 - Wrap page content in `aw-container aw-section`.
-- Do not use Tailwind or Bootstrap classes alongside it.
 - Customize with CSS variables, not by editing the library: `:root { --aw-primary: #0ea5e9; }`.
 - Dark mode follows the system by default. Force with `<html data-aw-theme="dark">` (or `"light"`), or scope with `class="aw-dark"`.
 - Styles live in cascade layers, so any unlayered CSS you write overrides them.
