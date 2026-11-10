@@ -35,6 +35,11 @@ Minimal page:
 </html>
 ```
 
+## LLMs
+
+Reference https://atherix.org/llms.txt in your prompt
+> **Example:** ```Use https://atherix.org/llms.txt for styling```
+
 ## Rules for generating code
 
 - Use only classes listed below. Do not invent `aw-*` classes.
