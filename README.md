@@ -54,7 +54,10 @@ Minimal page:
 ## LLMs
 
 Reference https://atherix.org/llms.txt in your prompt
-> **Example:** ```Use https://atherix.org/llms.txt for styling```
+> **Example:**
+```
+Use https://atherix.org/llms.txt for styling
+```
 
 ## Key notes for writing code
 
