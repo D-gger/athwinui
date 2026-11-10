@@ -53,10 +53,10 @@ Minimal page:
 
 ## LLMs
 
-Reference https://atherix.org/llms.txt in your prompt
-> **Example:**
+Reference https://atherix.org/athwinui/llms.txt in your prompt
+**Example:**
 ```
-Use https://atherix.org/llms.txt for styling
+Use https://atherix.org/athwinui/llms.txt for styling
 ```
 
 ## Key notes for writing code
